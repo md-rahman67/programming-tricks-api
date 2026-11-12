@@ -57,6 +57,10 @@ If no tricks are available:
 }
 ```
 
-## Author
+## 👨‍💻 Author
 
-Created as a beginner-friendly backend development project using Node.js and Express.js.
+Created as a personal learning project to practice Node.js, Express.js, and REST API development.
+
+---
+
+⭐ If you find this project useful, consider giving it a star!
