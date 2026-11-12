@@ -5,6 +5,11 @@ const app = express();
 
 
 app.get("/tricks", (req, res) => {
+    
+    if(!data.length){
+        return res.status(404).json({message: "Something went wrong while fetching tricks"})
+    }
+
     res.send(data[rdnNum()]);
 })
 
