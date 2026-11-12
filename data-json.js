@@ -178,7 +178,681 @@ const tricks = [
         title: "Save your changes",
         trick: "git add . && git commit -m 'your message'",
         description: "Stages your current changes and saves them in a Git commit."
-    }
+    },
+
+{
+    category: "JavaScript",
+    title: "Convert a string to an array of characters",
+    trick: "Array.from('hello')",
+    description: "Converts a string into an array where each character becomes an item."
+},
+{
+    category: "JavaScript",
+    title: "Check if a value is null or undefined",
+    trick: "value == null",
+    description: "Checks for both null and undefined using loose equality."
+},
+{
+    category: "JavaScript",
+    title: "Use nullish coalescing",
+    trick: "const name = userName ?? 'Guest'",
+    description: "Uses Guest only when userName is null or undefined, not when it is an empty string or zero."
+},
+{
+    category: "JavaScript",
+    title: "Get a random integer between two numbers",
+    trick: "Math.floor(Math.random() * (max - min + 1)) + min",
+    description: "Generates a random whole number between min and max, including both limits."
+},
+{
+    category: "JavaScript",
+    title: "Capitalize the first letter",
+    trick: "str.charAt(0).toUpperCase() + str.slice(1)",
+    description: "Converts the first character to uppercase and keeps the rest of the string unchanged."
+},
+{
+    category: "JavaScript",
+    title: "Check whether a string contains text",
+    trick: "str.includes('hello')",
+    description: "Returns true if the string contains the given text."
+},
+{
+    category: "JavaScript",
+    title: "Repeat a string multiple times",
+    trick: "'ha'.repeat(3)",
+    description: "Repeats a string the specified number of times. The result here is hahaha."
+},
+{
+    category: "JavaScript",
+    title: "Remove spaces from both ends",
+    trick: "str.trim()",
+    description: "Removes whitespace from the beginning and end of a string."
+},
+{
+    category: "JavaScript",
+    title: "Replace text in a string",
+    trick: "str.replace('old', 'new')",
+    description: "Replaces the first matching occurrence of old with new."
+},
+{
+    category: "JavaScript",
+    title: "Split a sentence into words",
+    trick: "sentence.split(' ')",
+    description: "Breaks a sentence into an array using spaces as separators."
+},
+{
+    category: "JavaScript",
+    title: "Sort numbers in ascending order",
+    trick: "arr.sort((a, b) => a - b)",
+    description: "Sorts numbers from smallest to largest. Without a compare function, sort treats values as strings."
+},
+{
+    category: "JavaScript",
+    title: "Sort numbers in descending order",
+    trick: "arr.sort((a, b) => b - a)",
+    description: "Sorts numbers from largest to smallest."
+},
+{
+    category: "JavaScript",
+    title: "Calculate the sum of an array",
+    trick: "arr.reduce((total, num) => total + num, 0)",
+    description: "Adds all numbers in an array and returns their total."
+},
+{
+    category: "JavaScript",
+    title: "Find the first matching item",
+    trick: "arr.find(item => item.active)",
+    description: "Returns the first item whose active property is truthy."
+},
+{
+    category: "JavaScript",
+    title: "Check if at least one item matches",
+    trick: "arr.some(num => num > 10)",
+    description: "Returns true if at least one array item is greater than 10."
+},
+{
+    category: "JavaScript",
+    title: "Create a shallow copy of an array",
+    trick: "const copy = [...arr]",
+    description: "Creates a new array with the same elements. Nested objects are not deeply copied."
+},
+{
+    category: "JavaScript",
+    title: "Create a shallow copy of an object",
+    trick: "const copy = { ...user }",
+    description: "Copies the top-level properties of an object into a new object."
+},
+{
+    category: "JavaScript",
+    title: "Get the current timestamp",
+    trick: "Date.now()",
+    description: "Returns the current time in milliseconds since January 1, 1970."
+},
+{
+    category: "JavaScript",
+    title: "Convert JSON text into an object",
+    trick: "JSON.parse(jsonString)",
+    description: "Parses valid JSON text and converts it into a JavaScript value."
+},
+{
+    category: "JavaScript",
+    title: "Convert an object into JSON text",
+    trick: "JSON.stringify(user)",
+    description: "Converts a JavaScript object into a JSON string."
+},
+{
+    category: "JavaScript",
+    title: "Check the type of a value",
+    trick: "typeof value",
+    description: "Returns the basic type of a value, such as string, number, boolean or undefined."
+},
+{
+    category: "JavaScript",
+    title: "Check if a number is an integer",
+    trick: "Number.isInteger(value)",
+    description: "Returns true if the value is an integer number."
+},
+{
+    category: "JavaScript",
+    title: "Convert a value to a number safely",
+    trick: "Number.isNaN(Number(value))",
+    description: "Checks whether converting a value to a number produces NaN."
+},
+{
+    category: "JavaScript",
+    title: "Get unique values from multiple arrays",
+    trick: "[...new Set([...arr1, ...arr2])]",
+    description: "Combines two arrays and removes duplicate values."
+},
+{
+    category: "JavaScript",
+    title: "Get the keys and values of an object",
+    trick: "Object.entries(user)",
+    description: "Returns an array of key-value pairs from an object's own enumerable properties."
+},
+{
+    category: "JavaScript",
+    title: "Freeze an object",
+    trick: "Object.freeze(user)",
+    description: "Prevents changes to an object's existing properties at the top level."
+},
+{
+    category: "JavaScript",
+    title: "Get today's date in ISO format",
+    trick: "new Date().toISOString()",
+    description: "Returns the current date and time in a standard ISO string format."
+},
+{
+    category: "JavaScript",
+    title: "Use a ternary operator",
+    trick: "const status = age >= 18 ? 'Adult' : 'Minor'",
+    description: "Writes a simple if-else condition in one line."
+},
+{
+    category: "JavaScript",
+    title: "Destructure object properties",
+    trick: "const { name, age } = user",
+    description: "Extracts selected properties from an object into variables."
+},
+{
+    category: "JavaScript",
+    title: "Destructure array values",
+    trick: "const [first, second] = arr",
+    description: "Stores the first two array elements in separate variables."
+},
+{
+    category: "React",
+    title: "Update an object in state",
+    trick: "setUser(prev => ({ ...prev, name: 'Alex' }))",
+    description: "Updates one object property while preserving the other properties."
+},
+{
+    category: "React",
+    title: "Run an effect only when a value changes",
+    trick: "useEffect(() => { console.log(count) }, [count])",
+    description: "Runs the effect after the initial render and when count changes."
+},
+{
+    category: "React",
+    title: "Run code once after the initial render",
+    trick: "useEffect(() => { console.log('Mounted') }, [])",
+    description: "Runs the effect after the initial render. Development Strict Mode may run an extra setup cycle."
+},
+{
+    category: "React",
+    title: "Create a reference without causing a re-render",
+    trick: "const inputRef = useRef(null)",
+    description: "Stores a value between renders without triggering a re-render when it changes."
+},
+{
+    category: "React",
+    title: "Access an input using a ref",
+    trick: "inputRef.current.focus()",
+    description: "Places the cursor inside an input when the ref is attached to it."
+},
+{
+    category: "React",
+    title: "Memoize a calculated value",
+    trick: "const result = useMemo(() => calculate(items), [items])",
+    description: "Reuses the previous calculation result until the dependencies change."
+},
+{
+    category: "React",
+    title: "Create a reusable click handler",
+    trick: "const handleClick = () => setCount(prev => prev + 1)",
+    description: "Keeps click logic in a separate function that can be passed to an event handler."
+},
+{
+    category: "React",
+    title: "Pass a function to a child component",
+    trick: "<Child onUpdate={handleUpdate} />",
+    description: "Allows a child component to call a function provided by its parent."
+},
+{
+    category: "React",
+    title: "Prevent a form from refreshing the page",
+    trick: "e.preventDefault()",
+    description: "Stops the browser's default form submission behavior."
+},
+{
+    category: "React",
+    title: "Render an empty fallback",
+    trick: "{items.length === 0 ? <p>No items</p> : <List />}",
+    description: "Shows a message when the array is empty and a list otherwise."
+},
+{
+    category: "React",
+    title: "Give a component a default state",
+    trick: "const [count, setCount] = useState(0)",
+    description: "Creates a state variable with an initial value of zero."
+},
+{
+    category: "React",
+    title: "Pass data through props",
+    trick: "<Profile name='Alex' age={22} />",
+    description: "Sends name and age values from a parent component to a child component."
+},
+{
+    category: "React",
+    title: "Use a fragment",
+    trick: "<><Header /><Main /><Footer /></>",
+    description: "Groups multiple JSX elements without adding an extra HTML element."
+},
+{
+    category: "React",
+    title: "Give a component a loading state",
+    trick: "{loading ? <p>Loading...</p> : <Content />}",
+    description: "Displays a loading message until the loading value becomes false."
+},
+{
+    category: "React",
+    title: "Update state using a previous value",
+    trick: "setCount(prev => prev + 1)",
+    description: "Uses the previous state value to calculate the next state correctly."
+},
+{
+    category: "React",
+    title: "Handle multiple input fields",
+    trick: "setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))",
+    description: "Updates the matching property in form state using the input's name."
+},
+{
+    category: "React",
+    title: "Create a custom hook",
+    trick: "function useCounter() { const [count, setCount] = useState(0); return { count, setCount }; }",
+    description: "Creates reusable state logic that can be shared by multiple components."
+},
+{
+    category: "CSS",
+    title: "Add a shadow to a box",
+    trick: "box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);",
+    description: "Adds a soft shadow around an element."
+},
+{
+    category: "CSS",
+    title: "Make text bold",
+    trick: "font-weight: 700;",
+    description: "Sets the text to a bold font weight."
+},
+{
+    category: "CSS",
+    title: "Make a circular image",
+    trick: "border-radius: 50%; object-fit: cover;",
+    description: "Turns a square image into a circle while keeping its proportions."
+},
+{
+    category: "CSS",
+    title: "Change cursor on hover",
+    trick: "cursor: pointer;",
+    description: "Shows a hand cursor when the user moves over an interactive element."
+},
+{
+    category: "CSS",
+    title: "Hide an element",
+    trick: "display: none;",
+    description: "Hides an element and removes its space from the page layout."
+},
+{
+    category: "CSS",
+    title: "Hide an element but keep its space",
+    trick: "visibility: hidden;",
+    description: "Makes an element invisible while keeping its space in the layout."
+},
+{
+    category: "CSS",
+    title: "Make a sticky header",
+    trick: "position: sticky; top: 0;",
+    description: "Keeps an element near the top while scrolling within its scroll container."
+},
+{
+    category: "CSS",
+    title: "Prevent text selection",
+    trick: "user-select: none;",
+    description: "Prevents users from selecting text inside an element."
+},
+{
+    category: "CSS",
+    title: "Add a transition effect",
+    trick: "transition: all 0.3s ease;",
+    description: "Animates changes to supported CSS properties over 0.3 seconds."
+},
+{
+    category: "CSS",
+    title: "Make a button change color on hover",
+    trick: "button:hover { background-color: black; color: white; }",
+    description: "Changes the button's background and text color when the mouse hovers over it."
+},
+{
+    category: "CSS",
+    title: "Make an element full screen",
+    trick: "width: 100vw; height: 100vh;",
+    description: "Makes an element as wide and tall as the viewport."
+},
+{
+    category: "CSS",
+    title: "Keep an element inside its container",
+    trick: "box-sizing: border-box;",
+    description: "Includes padding and border within the declared width and height."
+},
+{
+    category: "CSS",
+    title: "Make text responsive",
+    trick: "font-size: clamp(1rem, 2vw, 2rem);",
+    description: "Changes font size based on viewport width while keeping it within minimum and maximum limits."
+},
+{
+    category: "CSS",
+    title: "Create a gradient background",
+    trick: "background: linear-gradient(to right, blue, purple);",
+    description: "Creates a smooth color transition from blue to purple."
+},
+{
+    category: "CSS",
+    title: "Prevent an image from overflowing",
+    trick: "max-width: 100%; height: auto;",
+    description: "Keeps an image from becoming wider than its parent while preserving its proportions."
+},
+{
+    category: "HTML",
+    title: "Add a telephone link",
+    trick: '<a href="tel:+911234567890">Call us</a>',
+    description: "Creates a clickable link that can open the device's calling app."
+},
+{
+    category: "HTML",
+    title: "Add an email link",
+    trick: '<a href="mailto:hello@example.com">Email us</a>',
+    description: "Opens the user's default email application with a new email."
+},
+{
+    category: "HTML",
+    title: "Allow multiple file selection",
+    trick: '<input type="file" multiple />',
+    description: "Allows users to select more than one file."
+},
+{
+    category: "HTML",
+    title: "Add a placeholder to an input",
+    trick: '<input type="text" placeholder="Enter your name" />',
+    description: "Shows hint text inside an empty input field."
+},
+{
+    category: "HTML",
+    title: "Open a link in the same tab",
+    trick: '<a href="https://example.com">Visit</a>',
+    description: "Navigates to the linked page in the current browser tab by default."
+},
+{
+    category: "HTML",
+    title: "Add a tooltip",
+    trick: '<button title="Click to save">Save</button>',
+    description: "Provides extra information when users hover over an element in browsers that show title tooltips."
+},
+{
+    category: "HTML",
+    title: "Make a video show controls",
+    trick: '<video src="video.mp4" controls></video>',
+    description: "Displays browser controls for playing, pausing and adjusting video."
+},
+{
+    category: "HTML",
+    title: "Load an image lazily",
+    trick: '<img src="photo.jpg" loading="lazy" alt="Photo" />',
+    description: "Allows the browser to delay loading an image until it is near the visible area."
+},
+{
+    category: "HTML",
+    title: "Create a dropdown",
+    trick: '<select><option>React</option><option>Node.js</option></select>',
+    description: "Creates a dropdown menu with selectable options."
+},
+{
+    category: "HTML",
+    title: "Open a number input",
+    trick: '<input type="number" min="1" max="100" />',
+    description: "Creates a numeric input with minimum and maximum allowed values."
+},
+{
+    category: "Node.js",
+    title: "Get the current folder path",
+    trick: "__dirname",
+    description: "Returns the absolute path of the folder containing the current CommonJS file."
+},
+{
+    category: "Node.js",
+    title: "Get the current file path",
+    trick: "__filename",
+    description: "Returns the absolute path of the current CommonJS file."
+},
+{
+    category: "Node.js",
+    title: "Read a file",
+    trick: "fs.readFile('file.txt', 'utf8', callback)",
+    description: "Reads a file asynchronously and provides its contents through a callback."
+},
+{
+    category: "Node.js",
+    title: "Write data to a file",
+    trick: "fs.writeFile('file.txt', 'Hello', callback)",
+    description: "Writes data to a file asynchronously, replacing its previous contents if the file exists."
+},
+{
+    category: "Node.js",
+    title: "Create a folder",
+    trick: "fs.mkdirSync('uploads', { recursive: true })",
+    description: "Creates a folder and any missing parent folders synchronously."
+},
+{
+    category: "Node.js",
+    title: "Get a file extension",
+    trick: "path.extname('photo.png')",
+    description: "Returns the extension of a file path, such as .png."
+},
+{
+    category: "Node.js",
+    title: "Create a path safely",
+    trick: "path.join(__dirname, 'uploads', 'photo.png')",
+    description: "Joins folder and file names using the correct path separator for the operating system."
+},
+{
+    category: "Node.js",
+    title: "Get command-line arguments",
+    trick: "process.argv",
+    description: "Provides an array containing the arguments passed when starting a Node.js process."
+},
+{
+    category: "Node.js",
+    title: "Stop a Node.js process",
+    trick: "process.exit(0)",
+    description: "Stops the current Node.js process with exit code zero, indicating success."
+},
+{
+    category: "Node.js",
+    title: "Create a simple Express route",
+    trick: "app.get('/users', (req, res) => res.json(users))",
+    description: "Creates a GET endpoint that sends users as a JSON response."
+},
+{
+    category: "Node.js",
+    title: "Read URL parameters in Express",
+    trick: "req.params.id",
+    description: "Accesses a route parameter such as the id in a route like /users/:id."
+},
+{
+    category: "Node.js",
+    title: "Read query parameters in Express",
+    trick: "req.query.search",
+    description: "Accesses query string values such as search in /tricks?search=react."
+},
+{
+    category: "Node.js",
+    title: "Send a JSON response in Express",
+    trick: "res.json({ message: 'Success' })",
+    description: "Sends a JavaScript object as a JSON HTTP response."
+},
+{
+    category: "Node.js",
+    title: "Handle a missing Express route",
+    trick: "res.status(404).json({ message: 'Not found' })",
+    description: "Sends a 404 status code with a JSON message when a resource is not found."
+},
+{
+    category: "Git",
+    title: "See commit history",
+    trick: "git log --oneline",
+    description: "Displays recent commits in a short and readable format."
+},
+{
+    category: "Git",
+    title: "Create a new branch",
+    trick: "git switch -c feature-name",
+    description: "Creates a new branch and switches to it."
+},
+{
+    category: "Git",
+    title: "Switch branches",
+    trick: "git switch main",
+    description: "Moves your working directory to the main branch."
+},
+{
+    category: "Git",
+    title: "See differences in files",
+    trick: "git diff",
+    description: "Shows unstaged changes made to tracked files."
+},
+{
+    category: "Git",
+    title: "Undo staged changes",
+    trick: "git restore --staged file.js",
+    description: "Removes a file from the staging area without deleting its changes."
+},
+{
+    category: "Git",
+    title: "Download remote changes",
+    trick: "git pull",
+    description: "Fetches and integrates changes from the remote branch you are tracking."
+},
+{
+    category: "Git",
+    title: "Upload commits to GitHub",
+    trick: "git push",
+    description: "Sends your local commits to the configured remote repository."
+},
+{
+    category: "Git",
+    title: "Check remote repositories",
+    trick: "git remote -v",
+    description: "Shows the remote repository names and their URLs."
+},
+{
+    category: "Git",
+    title: "Temporarily save changes",
+    trick: "git stash",
+    description: "Stores your uncommitted tracked changes temporarily so you can work on something else."
+},
+{
+    category: "Git",
+    title: "Restore the latest stash",
+    trick: "git stash pop",
+    description: "Applies the latest stashed changes and removes that stash entry."
+},
+{
+    category: "npm",
+    title: "Install project dependencies",
+    trick: "npm install",
+    description: "Installs the dependencies listed in package.json and updates node_modules."
+},
+{
+    category: "npm",
+    title: "Install a package",
+    trick: "npm install express",
+    description: "Installs Express and adds it to the project's dependencies."
+},
+{
+    category: "npm",
+    title: "Install a development dependency",
+    trick: "npm install nodemon --save-dev",
+    description: "Installs nodemon as a development-only dependency."
+},
+{
+    category: "npm",
+    title: "Start a project script",
+    trick: "npm run dev",
+    description: "Runs the dev script defined in package.json."
+},
+{
+    category: "npm",
+    title: "See installed packages",
+    trick: "npm list --depth=0",
+    description: "Displays the top-level packages installed in the current project."
+},
+{
+    category: "npm",
+    title: "Check for outdated packages",
+    trick: "npm outdated",
+    description: "Shows which installed packages have newer versions available."
+},
+{
+    category: "VS Code",
+    title: "Open the command palette",
+    trick: "Ctrl + Shift + P",
+    description: "Opens the command palette to search for and run VS Code commands."
+},
+{
+    category: "VS Code",
+    title: "Open the terminal",
+    trick: "Ctrl + `",
+    description: "Opens or closes the integrated terminal in VS Code."
+},
+{
+    category: "VS Code",
+    title: "Quickly format code",
+    trick: "Shift + Alt + F",
+    description: "Formats the current file using the configured formatter."
+},
+{
+    category: "VS Code",
+    title: "Search across project files",
+    trick: "Ctrl + Shift + F",
+    description: "Finds matching text across files in your project."
+},
+{
+    category: "VS Code",
+    title: "Rename a variable everywhere",
+    trick: "F2",
+    description: "Renames a symbol and updates its references when supported by the language extension."
+},
+{
+    category: "VS Code",
+    title: "Add multiple cursors",
+    trick: "Alt + Click",
+    description: "Places additional cursors where you click so you can edit multiple locations together."
+},
+{
+    category: "VS Code",
+    title: "Duplicate a line",
+    trick: "Shift + Alt + Down",
+    description: "Duplicates the current line or selected lines below."
+},
+{
+    category: "VS Code",
+    title: "Move a line up or down",
+    trick: "Alt + Up / Down",
+    description: "Moves the current line or selected lines up or down."
+},
+{
+    category: "VS Code",
+    title: "Comment or uncomment a line",
+    trick: "Ctrl + /",
+    description: "Toggles a line comment for the current line or selected lines."
+},
+{
+    category: "VS Code",
+    title: "Quickly open a file",
+    trick: "Ctrl + P",
+    description: "Searches for and opens a file by its name."
+}
+
 ];
 
 module.exports = tricks;
