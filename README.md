@@ -30,11 +30,23 @@ programming-tricks-api/
 
 ## API Endpoint
 
-### Get Random Trick
+API Endpoints
 
-**Endpoint:** `GET /tricks`
+1. Get Welcome Message
+
+Endpoint: GET /
+
+Returns a welcome message.
+
+URL: https://programming-tricks-api.onrender.com/
+
+2. Get Random Trick
+
+Endpoint: GET /tricks
 
 Returns one random programming trick.
+
+URL: https://programming-tricks-api.onrender.com/tricks
 
 **Example Response:**
 
