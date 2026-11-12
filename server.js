@@ -1,7 +1,10 @@
+const dotenv = require("dotenv").config();
 const express = require("express");
 const data = require("./data-json");
 const rdnNum = require("./helper");
 const app = express();
+
+const PORT = process.env.PORT || 8080;
 
 
 app.get("/tricks", (req, res) => {
@@ -13,6 +16,6 @@ app.get("/tricks", (req, res) => {
     res.send(data[rdnNum()]);
 })
 
-app.listen(8080, () => {
-    console.log("app is listening to port 8080");
+app.listen(PORT, () => {
+    console.log(`app is listening to port ${PORT}`);
 })
